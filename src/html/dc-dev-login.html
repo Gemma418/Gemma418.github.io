@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="login-pf">
+  <head>
+    <meta charset="utf-8">
+    <title>DC-Dev Login</title>
+
+    <!-- webpack bundled css -->
+    <link rel="stylesheet" href="css/patternfly.min.css">
+    <link rel="stylesheet" href="css/patternfly-additions.min.css">
+
+    <!-- webpack bundled dependencies -->
+    <script src="main.bundle.js"></script>
+
+  </head>
+  <body>
+
+    <script>
+      (function(apiKey){
+          (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+          v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+              o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+              y=e.createElement(n);y.async=!0;y.src='https://pendo-dev-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
+              z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+      
+              // Call this whenever information about your visitors becomes available
+              // Please use Strings, Numbers, or Bools for value types.
+              pendo.initialize({
+                  visitor: {
+                      id:              'ID-dc-dev',   // Required if user is logged in
+                      email:        'darren.congreve@pendo.io'// Recommended if using Pendo Feedback, or NPS Email
+                      // full_name:    // Recommended if using Pendo Feedback
+                      // role:         // Optional
+      
+                      // You can add any additional visitor level key-values here,
+                      // as long as it's not one of the above reserved names.
+                  },
+      
+                  account: {
+                      id:           'Account-dc-dev' // Highly recommended
+                      // name:         // Optional
+                      // is_paying:    // Recommended if using Pendo Feedback
+                      // monthly_value:// Recommended if using Pendo Feedback
+                      // planLevel:    // Optional
+                      // planPrice:    // Optional
+                      // creationDate: // Optional
+      
+                      // You can add any additional account level key-values here,
+                      // as long as it's not one of the above reserved names.
+                  }
+              });
+      })('79239d3e-3dd8-4295-6479-5e8209c16452');
+      </script>
+      
+    <span id="badge">
+      <img src="img/logo.svg" alt=" logo" />
+    </span>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="brand">
+            <img src="img/brand.svg" alt="PatternFly Enterprise Application">
+          </div><!--/#brand-->
+        </div><!--/.col-*-->
+        <div class="col-sm-7 col-md-6 col-lg-5 login">
+          <form class="form-horizontal" role="form" action="index.html">
+            <div class="form-group">
+              <label for="inputUsername" class="col-sm-2 col-md-2 control-label">Username</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="text" class="form-control" id="inputUsername" placeholder="" tabindex="1">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword" class="col-sm-2 col-md-2 control-label">Password</label>
+              <div class="col-sm-10 col-md-10">
+                <input type="password" class="form-control" id="inputPassword" placeholder="" tabindex="2">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-8 col-sm-offset-2 col-sm-6 col-md-offset-2 col-md-6">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" tabindex="3"> Remember username
+                  </label>
+                </div>
+                <span class="help-block"> Forgot <a href="#" tabindex="5">username</a> or <a href="#" tabindex="6">password</a>?</span>
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 submit">
+                <button type="submit" class="btn btn-primary btn-lg" tabindex="4">Log In</button>
+              </div>
+            </div>
+          </form>
+        </div><!--/.col-*-->
+        <div class="col-sm-5 col-md-6 col-lg-7 details">
+          <p><strong>Welcome to PatternFly | open interface project!</strong>
+            This is placeholder text, only. Use this area to place any information or introductory message about your application that may be relevant for users. For example, you might include news or information about the latest release of your product here&mdash;such as a version number.</p>
+        </div><!--/.col-*-->
+      </div><!--/.row-->
+    </div><!--/.container-->
+  </body>
+</html>

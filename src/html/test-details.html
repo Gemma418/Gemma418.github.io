@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Details</title>
+
+    <!-- webpack bundled css -->
+    <link rel="stylesheet" href="css/patternfly.min.css">
+    <link rel="stylesheet" href="css/patternfly-additions.min.css">
+
+    <!-- webpack bundled dependencies -->
+    <script src="main.bundle.js"></script>
+  </head>
+  <body>
+
+    <script>
+      (function(apiKey){
+          (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+          v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+              o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+              y=e.createElement(n);y.async=!0;y.src='https://pendo-test-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
+              z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+      
+              // Call this whenever information about your visitors becomes available
+              // Please use Strings, Numbers, or Bools for value types.
+              pendo.initialize({
+                  visitor: {
+                      id:              'ID-test',   // Required if user is logged in
+                      email:        'george.palfreyman@pendo.io'// Recommended if using Pendo Feedback, or NPS Email
+                      // full_name:    // Recommended if using Pendo Feedback
+                      // role:         // Optional
+      
+                      // You can add any additional visitor level key-values here,
+                      // as long as it's not one of the above reserved names.
+                  },
+      
+                  account: {
+                      id:           'Account-test' // Highly recommended
+                      // name:         // Optional
+                      // is_paying:    // Recommended if using Pendo Feedback
+                      // monthly_value:// Recommended if using Pendo Feedback
+                      // planLevel:    // Optional
+                      // planPrice:    // Optional
+                      // creationDate: // Optional
+      
+                      // You can add any additional account level key-values here,
+                      // as long as it's not one of the above reserved names.
+                  }
+              });
+      })('e9c5ea0b-3127-4d8f-5d33-28148d808710');
+      </script>
+
+<!-- nav -->
+<nav class="navbar navbar-default navbar-pf" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="img/brand.svg" alt="Patternfly Demo App" />
+    </a>
+  </div>
+  <div class="collapse navbar-collapse navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-utility">
+      <li>
+        <a href="#">Status</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="pficon pficon-user"></span>
+          Brian Johnson <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="#">Settings</a>
+          </li>
+          <li>
+            <a href="#">Another link</a>
+          </li>
+          <li>
+            <a href="#">Something else here</a>
+          </li>
+          <li class="divider"></li>
+          <li class="dropdown-submenu">
+            <a tabindex="-1" href="#">More options</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Link</a>
+              </li>
+              <li>
+                <a href="#">Another link</a>
+              </li>
+              <li>
+                <a href="#">Something else here</a>
+              </li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li>
+                <a href="#">Separated link</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">One more separated link</a>
+              </li>
+            </ul>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a href="test-login.html">Logout</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-primary">
+      <li>
+        <a href="test.html">Dashboard</a>
+      </li>
+      <li class="active">
+        <a href="test-list.html">List View</a>
+      </li>
+      <li>
+        <a href="test-empty.html">Empty State</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <ol class="breadcrumb">
+    <li>
+      <a href="#">Back to Top Level</a>
+    </li>
+    <li>
+      <a href="card.html" title="Card view">Second Level</a>
+    </li>
+    <li>
+      <a href="list.html" title="List view">Third Level</a>
+    </li>
+    <li class="active"> <strong>Fourth Level:</strong>
+      Detail about fourth level
+    </li>
+  </ol>
+  <div class="alert alert-success">
+    <span class="pficon pficon-ok"></span>
+    <strong>Great job!</strong> This is really working out <a href="#" class="alert-link">great for us</a>.
+  </div>
+
+
+
+</div><!-- container -->
+
+<script>
+  // Row Checkbox Selection
+  $(document).ready(function () {
+    $("input[type='checkbox']").change(function (e) {
+      if ($(this).is(":checked")) {
+        $(this).closest('.list-group-item').addClass("active");
+      } else {
+        $(this).closest('.list-group-item').removeClass("active");
+      }
+    });
+  });
+</script>
+
+
+  </body>
+</html>

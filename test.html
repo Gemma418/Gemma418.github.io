@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Patternfly Demo App</title>
+    <title>test App</title>
 
     <!-- webpack bundled css -->
     <link rel="stylesheet" href="css/patternfly.min.css">
@@ -21,14 +21,14 @@
           (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
           v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
               o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-              y=e.createElement(n);y.async=!0;y.src='https://pendo-magic-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
+              y=e.createElement(n);y.async=!0;y.src='https://pendo-test-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
               z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
       
               // Call this whenever information about your visitors becomes available
               // Please use Strings, Numbers, or Bools for value types.
               pendo.initialize({
                   visitor: {
-                      id:              'ID-Magic',   // Required if user is logged in
+                      id:              'ID-test',   // Required if user is logged in
                       email:        'george.palfreyman@pendo.io'// Recommended if using Pendo Feedback, or NPS Email
                       // full_name:    // Recommended if using Pendo Feedback
                       // role:         // Optional
@@ -38,7 +38,7 @@
                   },
       
                   account: {
-                      id:           'Account-Magic' // Highly recommended
+                      id:           'Account-test' // Highly recommended
                       // name:         // Optional
                       // is_paying:    // Recommended if using Pendo Feedback
                       // monthly_value:// Recommended if using Pendo Feedback
@@ -50,7 +50,7 @@
                       // as long as it's not one of the above reserved names.
                   }
               });
-      })('f111326b-6c90-481a-46f8-e109c8938194');
+      })('e9c5ea0b-3127-4d8f-5d33-28148d808710');
       </script>
 
 <!-- nav -->
@@ -112,20 +112,20 @@
           </li>
           <li class="divider"></li>
           <li>
-            <a href="login.html">Logout</a>
+            <a href="test-login.html">Logout</a>
           </li>
         </ul>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-primary">
       <li class="active">
-        <a href="index.html">Dashboard</a>
+        <a href="test.html">Dashboard</a>
       </li>
       <li>
-        <a href="list.html">List View</a>
+        <a href="test-list.html">List View</a>
       </li>
       <li>
-        <a href="empty.html">Empty State</a>
+        <a href="test-empty.html">Empty State</a>
       </li>
     </ul>
   </div>
